@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "definitions.schema.json",
+    "types": {
+        "type": "object",
+        "keyword": {
+            "type": "string",
+            "enum": [ "keyword" ]
+        },
+        "text": {
+            "type": "string",
+            "enum": [ "text" ]
+        },
+        "date": {
+            "type": "string",
+            "enum": [ "date", "date_nanos" ]
+        }
+    },
+    "settings": {
+        "type": "object",
+        "ignore_above": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+        }
+    }
+}

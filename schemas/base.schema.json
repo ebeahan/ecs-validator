@@ -1,0 +1,46 @@
+{
+  "$id": "base.schema.json",
+  "description": "All fields defined directly at the root of the events.",
+  "type": "object",
+  "required": [ "@timestamp", "message", "tags", "labels" ],
+  "properties": {
+    "@timestamp": {
+      "description": "Date/time when the event originated",
+      "type": "object",
+      "required": [ "type" ],
+      "properties": {
+        "type": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/date"
+        }
+      }
+    },
+    "tags": {
+      "description": "List of keywords used to tag each event",
+      "type": "object",
+      "required": [ "type" ],
+      "properties": {
+        "type": { "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword" }
+      }
+    },
+    "labels": {
+      "description": "Custom key/value pairs",
+      "type": "object",
+      "required": [ "type" ],
+      "properties": {
+        "additionalProperties": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+        }
+      }
+    },
+    "message": {
+      "description": "Log message optimized for viewing in a log viewer",
+      "type": "object",
+      "required": [ "type" ],
+      "properties": {
+        "type": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/text"
+        }
+      }
+    }
+  }
+}

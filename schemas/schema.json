@@ -1,0 +1,23 @@
+{
+    "version": "0.1.0",
+    "properties": {
+        "@timestamp": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/base.schema.json#properties/@timestamp"
+        },
+        "tags": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/base.schema.json#properties/tags"
+        },
+        "labels": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/base.schema.json#properties/labels"
+        },
+        "message": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/base.schema.json#properties/message"
+        },
+        "agent": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/agent.schema.json#properties/agent" 
+        },
+        "organization": {
+          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/organization.schema.json#properties/organization" 
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "$id": "organization.schema.json",
+  "description": "Fields describing the organization or company the event is associated with.",
+  "type": "object",
+  "properties": {
+    "organization": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "required": [ "name", "id" ],
+          "properties": {
+            "name": {
+              "description": "Organization name",
+              "type": "object",
+              "required": [ "type" ],
+              "properties": {
+                "type": {
+                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                },
+                "fields": {
+                  "type": "object",
+                  "required": [ "text" ],
+                  "properties": {
+                    "text" : {
+                      "type": "object",
+                      "required": [ "type" ],
+                      "properties": {
+                        "type": {
+                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/text" 
+                        }
+                      }
+                    }
+                  }
+                } 
+              }
+            },
+            "id": {
+              "description": "Unique identifier for the organization",
+              "type": "object",
+              "required": [ "type" ],
+              "properties": {
+                "type": {
+                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

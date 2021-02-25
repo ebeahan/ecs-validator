@@ -1,0 +1,55 @@
+{
+  "$id": "agent.schema.json",
+  "description": "Fields about the monitoring agent",
+  "type": "object",
+  "properties": {
+    "agent": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "required": [ "version", "build" ],
+          "properties": {
+            "version": {
+              "description": "Version of the agent",
+              "type": "object",
+              "required": [ "type" ],
+              "properties": {
+                "type": {
+                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                },
+                "ignore_above": {
+                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/settings/ignore_above"
+                }
+              }
+            },
+            "build": {
+              "description": "Extended build information for the agent",
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "required": [ "original" ],
+                  "properties": {
+                    "original": {
+                      "type": "object",
+                      "required": [ "type" ],
+                      "properties": {
+                        "type": {
+                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                        },
+                        "ignore_above": {
+                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/settings/ignore_above"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
