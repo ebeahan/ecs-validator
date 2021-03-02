@@ -16,6 +16,9 @@
         "agent": {
           "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/agent.schema.json#properties/agent" 
         },
+        "error": {
+          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/agent.schema.json#properties/error" 
+        },
         "organization": {
           "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/organization.schema.json#properties/organization" 
         }
