@@ -16,7 +16,7 @@
               "required": [ "type" ],
               "properties": {
                 "type": {
-                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                  "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
                 },
                 "fields": {
                   "type": "object",
@@ -27,7 +27,7 @@
                       "required": [ "type" ],
                       "properties": {
                         "type": {
-                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/text" 
+                          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/text" 
                         }
                       }
                     }
@@ -41,7 +41,7 @@
               "required": [ "type" ],
               "properties": {
                 "type": {
-                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                  "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
                 }
               }
             }

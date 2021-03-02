@@ -16,10 +16,10 @@
               "required": [ "type" ],
               "properties": {
                 "type": {
-                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                  "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
                 },
                 "ignore_above": {
-                  "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/settings/ignore_above"
+                  "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/settings/ignore_above"
                 }
               }
             },
@@ -36,10 +36,10 @@
                       "required": [ "type" ],
                       "properties": {
                         "type": {
-                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+                          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
                         },
                         "ignore_above": {
-                          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/settings/ignore_above"
+                          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/settings/ignore_above"
                         }
                       }
                     }

@@ -10,7 +10,7 @@
       "required": [ "type" ],
       "properties": {
         "type": {
-          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/date"
+          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/date"
         }
       }
     },
@@ -19,7 +19,7 @@
       "type": "object",
       "required": [ "type" ],
       "properties": {
-        "type": { "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword" }
+        "type": { "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword" }
       }
     },
     "labels": {
@@ -28,7 +28,7 @@
       "required": [ "type" ],
       "properties": {
         "additionalProperties": {
-          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/keyword"
+          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
         }
       }
     },
@@ -38,7 +38,7 @@
       "required": [ "type" ],
       "properties": {
         "type": {
-          "$ref": "file:///Users/ericbeahan/dev/ecs-validator/schemas/definitions.schema.json#/types/text"
+          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/text"
         }
       }
     }

@@ -5,16 +5,14 @@ import jsonschema
 from .utils import load_jsonschema
 
 # globals
-JSONSCHEMA_DIR: str = Path('./schemas').resolve()
+JSONSCHEMA = "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/schema.json"
 ERROR_SKIPLIST: list = [ 'properties', 'enum', 'required' ]
 
 
 def index_mapping_validation_errors(mapping) -> list:
-    schema = load_jsonschema(f'{JSONSCHEMA_DIR}/schema.json')
+    schema = load_jsonschema(JSONSCHEMA)
   
-    resolver = jsonschema.RefResolver(base_uri=f'{JSONSCHEMA_DIR.as_uri()}/', referrer=schema)
-
-    validator = jsonschema.Draft7Validator(schema, resolver=resolver)
+    validator = jsonschema.Draft7Validator(schema)
     return sorted(validator.iter_errors(mapping), key=lambda e: e.path)
 
 
