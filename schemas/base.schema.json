@@ -28,7 +28,7 @@
       "required": [ "type" ],
       "properties": {
         "type": {
-          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"
+          "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/object"
         }
       }
     },

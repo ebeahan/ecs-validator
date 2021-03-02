@@ -14,6 +14,10 @@
         "date": {
             "type": "string",
             "enum": [ "date", "date_nanos" ]
+        },
+        "object": {
+            "type": "string",
+            "enum": [" object" ]
         }
     },
     "settings": {
