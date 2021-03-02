@@ -13,7 +13,7 @@
             "name": {
               "description": "Organization name",
               "type": "object",
-              "required": [ "type" ],
+              "required": [ "type", "fields" ],
               "properties": {
                 "type": {
                   "$ref": "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/definitions.schema.json#/types/keyword"

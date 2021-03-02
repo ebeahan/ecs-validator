@@ -17,7 +17,7 @@
         },
         "object": {
             "type": "string",
-            "enum": [" object" ]
+            "enum": [ "object" ]
         }
     },
     "settings": {
