@@ -25,4 +25,4 @@ def get_elasticsearch_client(cloud_id=None, elasticsearch_url=None, es_user=None
 
     except elasticsearch.AuthenticationException as error:
         error_message = f'Failed authentication for {elasticsearch_url or cloud_id}.\nReason: {error}'
-        raise click.ClickException(error_message
+        raise click.ClickException(error_message)
