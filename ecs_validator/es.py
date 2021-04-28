@@ -7,14 +7,15 @@ def get_elasticsearch_client(cloud_id=None, elasticsearch_url=None, es_user=None
                              timeout=None, no_auth=False) -> Elasticsearch:
 
     if not (cloud_id or elasticsearch_url):
-       raise click.ClickException('Missing required arguments --cloud-id or --elasticsearch-url')
+        raise click.ClickException('Missing required arguments --cloud-id or --elasticsearch-url')
 
     if not no_auth:
         es_user = es_user or click.prompt('es_user')
         es_password = es_password or click.prompt('es_password')
         http_auth = (es_user, es_password)
     else:
-        http_auth=None
+        http_auth = None
+
     hosts = [elasticsearch_url] if elasticsearch_url else None
     timeout = timeout if timeout else 60
 

@@ -11,4 +11,4 @@ def load_jsonschema(schema_file) -> dict:
 
 
 def extract_index_mappings(index_mappings, index_name) -> dict:
-    return index_mappings.get(index_name).get('mappings').get('properties') 
+    return index_mappings.get(index_name).get('mappings').get('properties')

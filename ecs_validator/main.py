@@ -30,7 +30,7 @@ def root(cloud_id, elasticsearch_url, es_user, es_password, timeout, index, no_a
     except exceptions.NotFoundError:
         raise click.ClickException(f'No such index `{index}` found at {elasticsearch_url}')
 
-    # Validate the index settings mapping properties 
+    # Validate the index settings mapping properties
     mappings = extract_index_mappings(index_settings, index)
     schema = load_jsonschema(schema_file)
     validation_errors = get_validation_errors(mappings, schema)
