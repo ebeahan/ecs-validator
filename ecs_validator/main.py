@@ -16,7 +16,7 @@ from .utils import extract_index_mappings, load_jsonschema
 @click.option('--schema-file', type=click.Path(exists=True), help="File name of the JSON schema to evaluate against.", required=True)
 def root(cloud_id, elasticsearch_url, es_user, es_password, timeout, index, no_auth, schema_file):
     click.echo()
-    click.echo(f'Retrieving index settings for index `{index}`...')
+    click.echo(f'Retrieving index settings for index {index}...')
     click.echo()
 
     # init es client
@@ -33,11 +33,17 @@ def root(cloud_id, elasticsearch_url, es_user, es_password, timeout, index, no_a
     schema = load_jsonschema(schema_file)
     validation_errors = get_validation_errors(mappings, schema)
 
+    # Display ECS version extracted from provided JSON Schema file
+    if schema.get("version"):
+        click.secho()
+        click.secho(f'Provided JSON Schema generated using ECS version {schema.get("version")}...')
+        click.secho()
+
     if not validation_errors:
         click.secho('No validation errors.', bold=True)
     else:
         click.secho(f'*** {len(validation_errors)} validation error(s) detected. ***', bold=True)
         click.echo()
         for error in validation_errors:
-            click.echo(f'* {error}')
+            click.echo(f'* {error}', err=True)
         exit(1)
