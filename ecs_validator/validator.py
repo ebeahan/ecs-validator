@@ -1,23 +1,18 @@
 from pathlib import Path
 
+import json
 import jsonschema
 
-from .utils import load_jsonschema
 
 # globals
-JSONSCHEMA = "https://raw.githubusercontent.com/ebeahan/ecs-validator/main/schemas/schema.json"
 ERROR_SKIPLIST: list = [ 'properties', 'enum', 'required' ]
 
 
-def index_mapping_validation_errors(mapping) -> list:
-    schema = load_jsonschema(JSONSCHEMA)
-  
+def get_validation_errors(index_mapping, schema) -> list:
+
     validator = jsonschema.Draft7Validator(schema)
-    return sorted(validator.iter_errors(mapping), key=lambda e: e.path)
 
-
-def get_validation_errors(index_mapping) -> list:
-    errors = index_mapping_validation_errors(index_mapping)
+    errors = sorted(validator.iter_errors(index_mapping), key=lambda e: e.path)
 
     formatted_errors = []
 

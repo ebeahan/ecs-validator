@@ -1,10 +1,13 @@
 import json
 
-import requests
 
-def load_jsonschema(schema_uri, request_timeout=60) -> dict:
-    resp = requests.get(schema_uri, timeout=request_timeout)
-    return resp.json()
+def load_jsonschema(schema_file) -> dict:
+    # resp = requests.get(schema_uri, timeout=request_timeout)
+    # return resp.json()
+    with open(schema_file, 'r') as source:
+        schema_json = json.load(source)
+
+    return schema_json
 
 
 def extract_index_mappings(index_mappings, index_name) -> dict:
