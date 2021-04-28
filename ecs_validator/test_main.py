@@ -3,6 +3,7 @@ import pytest
 
 from .main import root
 
+
 @pytest.fixture
 def runner():
     return CliRunner()

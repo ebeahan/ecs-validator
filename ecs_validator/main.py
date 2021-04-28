@@ -5,6 +5,7 @@ from .es import get_elasticsearch_client
 from .validator import get_validation_errors
 from .utils import extract_index_mappings, load_jsonschema
 
+
 @click.command()
 @click.option('--cloud-id')
 @click.option('--elasticsearch-url')
@@ -13,7 +14,8 @@ from .utils import extract_index_mappings, load_jsonschema
 @click.option('--timeout', default=60, help='Timeout for Elasticsearch client.')
 @click.option('--index', "-i", help='Name of index to evaluate.', required=True)
 @click.option('--no-auth', help='Disable HTTP authentication to Elasticsearch.', is_flag=True)
-@click.option('--schema-file', type=click.Path(exists=True), help="File name of the JSON schema to evaluate against.", required=True)
+@click.option('--schema-file', type=click.Path(exists=True), help="File name of the JSON schema to evaluate against.",
+              required=True)
 def root(cloud_id, elasticsearch_url, es_user, es_password, timeout, index, no_auth, schema_file):
     click.echo()
     click.echo(f'Retrieving index settings for index {index}...')
@@ -21,7 +23,7 @@ def root(cloud_id, elasticsearch_url, es_user, es_password, timeout, index, no_a
 
     # init es client
     client = get_elasticsearch_client(cloud_id, elasticsearch_url, es_user, es_password, timeout, no_auth)
-    
+
     # Retrieve the index settings
     try:
         index_settings = client.indices.get(index=index)
