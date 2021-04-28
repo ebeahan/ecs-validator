@@ -4,17 +4,16 @@ The `ecs-validator` tool uses [JSON Schema](https://json-schema.org) spec to val
 
 ## Getting Started
 
-Install dependencies:
+Install dependencies using `pipenv`:
 
 ```
-$ pip install -r requirements.txt
+$ pipenv install 
 ```
 
 Confirm everything is installed properly:
 
 ```
 $ python -m ecs_validator --help
-
 Usage: ecs_validator [OPTIONS]
 
 Options:
@@ -25,6 +24,9 @@ Options:
   --timeout INTEGER         Timeout for Elasticsearch client.
   -i, --index TEXT          Name of index to evaluate.  [required]
   --no-auth                 Disable HTTP authentication to Elasticsearch.
+  --schema-file PATH        File name of the JSON schema to evaluate against.
+                            [required]
+
   --help                    Show this message and exit.
 
 ```
@@ -32,7 +34,7 @@ Options:
 Basic usage:
 
 ```
-$ python -m ecs_validator --elasticsearch-url http://localhost:9200 --no-auth --index non-compliant-index-name
+$ python -m ecs_validator --elasticsearch-url http://localhost:9200 --no-auth --index non-compliant-index-name --schema-file schemas/ecs-1.9.0.json
 
 Retrieving index settings for index `bad-ecs-0005`...
 
